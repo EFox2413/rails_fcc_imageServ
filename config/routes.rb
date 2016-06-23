@@ -24,19 +24,19 @@ Rails.application.routes.draw do
 
   #fcc backend url shortener microservice
   # =>create new shortened link
-  get 'newShLink/:url', to: 'shortURL#create'
+  #get 'newShLink/:url', to: 'shortURL#create'
   # =>forward from shortened link to reference
-  get 'l/:id', to: 'shortURL#forward'
+  #get 'l/:id', to: 'shortURL#forward'
 
   #fcc backend image search abstraction layer
-  get 'imageSearch', to: 'search#main'
-  get 'imageSearch/:query', to: 'search#create'
+  #get 'imageSearch', to: 'search#main'
+  #get 'imageSearch/:query', to: 'search#create'
   
   #fcc backend file size shower
   # =>submit a file form view
-  get 'filesize', to: 'filesize#create'
+  #get 'filesize', to: 'filesize#create'
   # =>show filesize of submitted file
-  get 'filesize/show', to: 'filesize#show'
+  #get 'filesize/show', to: 'filesize#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
