@@ -6,5 +6,5 @@ Rails.application.initialize!
 
 # required for https requests in ruby to work right
 ENV["SSL_CERT_FILE"] = "C:\\Ruby22\\cacert.pem"
-# required to use imgur api
-ENV["IMGUR_CLIENT_ID"] = "a548b7eee990427"
+
+ENV["IMGUR_API_KEY"] = "a548b7eee990427"
