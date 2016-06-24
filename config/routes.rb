@@ -30,6 +30,7 @@ Rails.application.routes.draw do
 
   #fcc backend image search abstraction layer
   get 'imageSearch', to: 'search#main'
+  get 'imageSearch/last10', to: 'search#show'
   get 'imageSearch/:query?offset=:offset', to: 'search#offset'
   get 'imageSearch/*query', to: 'search#create'
   
