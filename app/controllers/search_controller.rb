@@ -34,7 +34,7 @@ class SearchController < ApplicationController
         #imgur api key
         # imgur headers
         headers = {
-            "Authorization" => "Client-ID " + IMGUR_CLIENT_ID
+            "Authorization" => "Client-ID " + ENV["IMGUR_CLIENT_ID"]
         }
 
         #search path
