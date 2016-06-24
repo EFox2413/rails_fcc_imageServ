@@ -48,5 +48,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # For heroku
 gem 'rails_12factor', group: :production
 
+# for https ssl connections
+gem 'certified'
+
 # Easy setup of environment variables to keep secrets secret
 ruby "2.2.4"

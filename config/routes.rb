@@ -23,15 +23,15 @@ Rails.application.routes.draw do
   get 'whoami', to: 'welcome#getHeader'
 
   #fcc backend url shortener microservice
-  resources :shorturls
   # =>create new shortened link
   get 'newShLink/*original(.:format)', to: 'shorturl#create'
   # =>forward from shortened link to reference
   get 'l/:ident', to: 'shorturl#forward'
 
   #fcc backend image search abstraction layer
-  #get 'imageSearch', to: 'search#main'
-  #get 'imageSearch/:query', to: 'search#create'
+  get 'imageSearch', to: 'search#main'
+  get 'imageSearch/:query?offset=:offset', to: 'search#offset'
+  get 'imageSearch/*query', to: 'search#create'
   
   #fcc backend file size shower
   # =>submit a file form view
