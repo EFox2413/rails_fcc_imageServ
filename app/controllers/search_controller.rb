@@ -32,10 +32,9 @@ class SearchController < ApplicationController
         @searchObj.save
 
         #imgur api key
-        imgurKey = 'a548b7eee990427'
         # imgur headers
         headers = {
-            "Authorization" => "Client-ID " + imgurKey
+            "Authorization" => "Client-ID " + IMGUR_CLIENT_ID
         }
 
         #search path
