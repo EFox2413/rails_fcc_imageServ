@@ -1,33 +1,5 @@
 Rails.application.routes.draw do
 
-  #base index page
-  root 'welcome#index'
-
-  #independent projects
-  get 'factorio', to: 'welcome#factorio'
-  get 'initium+', to: 'welcome#initium+'
-  get 'thaiLinPan', to: 'welcome#thaiLinPan'
-  get 'volunDev', to: 'welcome#volunDev'
-
-  #fcc frontend weatherApp
-  get 'weather', to: 'welcome#weather'
-
-  #fcc frontend portfolio
-  get 'portfolio', to: 'welcome#portfolio'
-
-  #fcc backend timestamp microservice
-  get 'timestamp', to: 'welcome#timestamp'
-  get 'timestamp/:time', to: 'welcome#create'
-
-  #fcc backend getHeader
-  get 'whoami', to: 'welcome#getHeader'
-
-  #fcc backend url shortener microservice
-  # =>create new shortened link
-  get 'newShLink/*original(.:format)', to: 'shorturl#create'
-  # =>forward from shortened link to reference
-  get 'l/:ident', to: 'shorturl#forward'
-
   #fcc backend image search abstraction layer
   get 'imageSearch', to: 'search#main'
   get 'imageSearch/last10', to: 'search#show'
