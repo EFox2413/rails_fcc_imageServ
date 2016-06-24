@@ -23,10 +23,11 @@ Rails.application.routes.draw do
   get 'whoami', to: 'welcome#getHeader'
 
   #fcc backend url shortener microservice
+  resources :shorturls
   # =>create new shortened link
-  #get 'newShLink/:url', to: 'shortURL#create'
+  get 'newShLink/*original(.:format)', to: 'shorturl#create'
   # =>forward from shortened link to reference
-  #get 'l/:id', to: 'shortURL#forward'
+  get 'l/:ident', to: 'shorturl#forward'
 
   #fcc backend image search abstraction layer
   #get 'imageSearch', to: 'search#main'
