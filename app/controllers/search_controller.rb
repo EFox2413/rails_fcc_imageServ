@@ -34,7 +34,9 @@ class SearchController < ApplicationController
         #imgur api key
         # imgur headers
         headers = {
-            "Authorization" => "Client-ID " + ENV["IMGUR_CLIENT_ID"]
+            #cant figure out how to use this with Rails.application.secrets['imgur_api_key'] returns nil
+            # so use env variable for now, better than having the api key exposed
+            "Authorization" => "Client-ID " + ENV["IMGUR_API_KEY"]
         }
 
         #search path
